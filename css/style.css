@@ -76,23 +76,23 @@ h1  {
 }
 
 .navbar {
-    min-height: 78px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-size: 27px;
-    font-weight: 800;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -1.5px;
+    display: flex;
+    align-items: center;
 }
 
-.logo span {
-    color: var(--primary-dark);
+.logo img {
+    width: 150px;
+    height: 65px;
+    object-fit: contain;
 }
- 
+
 /* =========================
    HERO
 ========================= */
@@ -105,7 +105,7 @@ h1  {
     align-items: center;
 
     background:
-        url("assets/images/hero-bg.jpg")
+        url("assets/building.jpg")
         center/cover no-repeat;
 }
 
@@ -123,6 +123,11 @@ h1  {
 .hero-content {
     position: relative;
     color: white;
+     display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     padding-top: 80px;
     padding-bottom: 80px;
     animation: fadeUp .8s ease;
@@ -211,7 +216,21 @@ h1  {
     border-radius: 50%;
     margin-right: 8px;
 } 
- 
+
+.hero-animation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-animation img {
+    width: 100%;
+    max-width: 480px;
+    height: 400px;
+    margin-left: 30%;
+    object-fit: contain;
+}
 
 /* =========================
    FOOTER
@@ -237,4 +256,20 @@ h1  {
 
 .footer-logo span {
     color: var(--primary);
+}
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-animation video {
+        max-width: 350px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
 }
